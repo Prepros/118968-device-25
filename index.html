@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Главная страница - Интернет магазан Девайс</title>
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="main-header">
+    <a class="logo">
+      <img src="http://placehold.it/163x35" width="163" height="35" alt="Логотип Девайс">
+    </a>
+    <!-- Навигация -->
+    <nav class="main-nav">
+      <div class="main-nav-top">
+        <span class="search">Поиск по сайту</span>
+        <ul class="user-list">
+          <li><a class="user-link" href="catalog.html">Войти</a></li>
+        </ul>
+        <ul class="cart-list">
+          <li><a class="cart-compare" href="#">Сравнить</a></li>
+          <li><a class="cart-link" href="#">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="main-nav-bottom">
+        <ul class="nav-list">
+          <li>
+            <a href="catalog.html">Каталог товаров</a>
+            <ul class="nav-list-second">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+           </li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+  <!-- Основное содержимое -->
+  <main class="container">
+    <h1 class="visually-hidden">Интернет магазан электронных гаджетов Девайс</h1>
 
-  </body>
+    <!-- О нас -->
+    <section class="about">
+      <h2>О нас</h2>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+      <ul>
+        <li>Деловые Линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a class="button" href="#">Подробнее о нас</a>
+    </section>
+
+    <section class="contacts">
+      <h2>Контакты</h2>
+      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+      <p><img src="http://placehold.it/560x222" width="560" height="222" alt="Карта"></p>
+      <a class="button" href="#">Напишите нам</a>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="main-footer">
+    <!-- Верхний блок подвала -->
+    <div class="main-footer-top">
+      <a class="logo">
+        <img src="http://placehold.it/163x35" width="163" height="35" alt="Логотип Девайс">
+      </a>
+      <ul class="user-list">
+        <li><a class="user-link" href="catalog.html">Войти</a></li>
+      </ul>
+      <ul class="cart-list">
+        <li><a class="cart-compare" href="#">Сравнить</a></li>
+        <li><a class="cart-link" href="#">Корзина</a></li>
+      </ul>
+    </div>
+    <!-- Центральный блок подвала -->
+    <div class="main-footer-middle">
+      <address>г. Москва, ул. Строителей, 15</address>
+      <ul class="nav-list">
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <address>Тел.: +7 (495) 495-95-95</address>
+    </div>
+    <!-- Нижний блок подвала -->
+    <div class="main-footer-bottom">
+      <ul class="social">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+    </div>
+  </footer>
+
+  <!-- Модальное окно - Напишите нам -->
+  <section class="modal modal-message">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <!-- Здесь будет форма -->
+    <span class="modal-close">x</span>
+  </section>
+
+  <!-- Модальное окно - Карта проезда -->
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Карта проезда</h2>
+    <img src="http://placehold.it/960x559" width="960" height="559" alt="Карта проезда">
+    <span class="modal-close">x</span>
+  </section>
+</body>
 </html>
