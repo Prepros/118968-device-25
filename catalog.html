@@ -9,154 +9,225 @@
 <body>
   <!-- Шапка -->
   <header class="main-header">
-    <a class="logo" href="index.html">
-      <img src="http://placehold.it/163x35" width="163" height="35" alt="Логотип Девайс">
-    </a>
-    <!-- Навигация -->
-    <nav class="main-nav">
-      <div class="main-nav-top">
-        <span class="search">Поиск по сайту</span>
-        <ul class="user-list">
-          <li><a class="user-link" href="profile.html">Валентин Петухов</a></li>
-          <li><a href="index.html">Выйти</a></li>
-        </ul>
-        <ul class="cart-list">
-          <li><a class="cart-compare" href="#">Сравнить</a></li>
-          <li><a class="cart-link" href="#">Корзина</a></li>
-        </ul>
-      </div>
-      <div class="main-nav-bottom">
-        <ul class="nav-list">
-          <li>
-            <a href="catalog.html">Каталог товаров</a>
-            <ul class="nav-list-second">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-              <li><a href="#">Квадрокоптеры</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </div>
+    <!-- Верхний блок -->
+    <div class="main-header-top">
+      <a class="logo">
+        <img src="http://placehold.it/163x35" width="163" height="35" alt="Логотип Девайс">
+      </a>
+    </div>
+
+    <!-- Центральный блок -->
+    <div class="main-header-middle">
+      <form class="search" action="index.html" method="get">
+        <label class="search-icon">
+          <input class="search-input" type="text" name="search" value="" placeholder="Поиск по сайту">
+        </label>
+        <button class="search-button" type="submit">Найти</button>
+      </form>
+      <ul class="user-list">
+        <li class="user-item"><a class="user-link" href="profile.html">Валентин Петухов</a></li>
+        <li class="user-item"><a class="user-link" href="index.html">Выйти</a></li>
+        <li class="user-item"><a class="user-compare" href="#">Сравнить</a></li>
+        <li class="user-item"><a class="user-cart" href="#">Корзина</a></li>
+      </ul>
+    </div>
+
+    <!-- Нижний блок -->
+    <nav class="main-header-bottom nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="catalog.html">Каталог товаров</a>
+          <ul class="nav-list-second">
+            <li class="nav-item"><a class="nav-link" href="#">Виртуальная реальность</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Моноподы для селфи</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Экшн-камеры</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Фитнес-браслеты</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Умные часы</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Квадрокоптеры</a></li>
+          </ul>
+         </li>
+        <li class="nav-item"><a class="nav-link" href="#">Доставка</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Гарантия</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+      </ul>
     </nav>
   </header>
 
   <!-- Основное содержимое -->
   <main class="container">
-    <h1 class="page-title">Интернет магазан электронных гаджетов Девайс</h1>
+    <h1 class="page-title">Моноподы для селфи</h1>
+
     <!-- Хлебные крошки -->
     <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Каталог товаров</a></li>
-      <li class="breadcrumbs-current">Моноподы для селфи</li>
+      <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html">Главная</a></li>
+      <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="catalog.html">Каталог товаров</a></li>
+      <li class="breadcrumbs-item-current">Моноподы для селфи</li>
     </ul>
 
-    <!-- Фильтер -->
-    <section class="filter">
-      <h2 class="visually-hidden">Фильтр товаров</h2>
-      <!-- Здесь будет форма -->
-    </section>
+    <!-- Товары -->
+    <div class="catalog-wrapper">
+      <!-- Фильтер -->
+      <section class="filter left-block">
+        <h2 class="visually-hidden">Фильтр</h2>
 
-    <!-- Каталог товаров -->
-    <section class="catalog">
-      <h2 class="visually-hidden">Каталог товаров</h2>
+        <form class="filter-form" action="index.html" method="get">
+          <!-- Стоимость -->
+          <fieldset class="filter-fields">
+            <legend class="filter-title">Стоимость</legend>
+            <!-- Здесь будут ползунки, регулирующие стоимость -->
+          </fieldset>
 
-      <!-- Список товаров -->
-      <ul class="catalog-list">
-        <li class="catalog-item">
-          <h3><a href="#">Любительская селфи-палка</a></h3>
-          <span>500 руб.</span>
-          <div class="catalog-image">
-            <img src="http://placehold.it/360x380" width="360" height="380" alt="Любительская селфи-палка">
-            <p class="catalog-add">
-              <a class="button" href="#">В корзину</a>
-              <a href="#">Добавить к сравнению</a>
+          <!-- Цвет -->
+          <fieldset class="filter-fields">
+            <legend class="filter-title">Цвет</legend>
+            <p class="filter-row">
+              <input id="color-black" class="filter-input filter-input-checkbox" type="checkbox" name="filter-color" value="Черный" checked>
+              <label for="color-black">Черный</label>
             </p>
-           </div>
-         </li>
-        <li class="catalog-item">
-          <h3><a href="#">Профессиональная селфи-палка</a></h3>
-          <span>1 500 руб.</span>
-          <div class="catalog-image">
-            <img src="http://placehold.it/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
-            <p class="catalog-add">
-              <a class="button" href="#">В корзину</a>
-              <a href="#">Добавить к сравнению</a>
+            <p class="filter-row">
+              <input id="color-white" class="filter-input filter-input-checkbox" type="checkbox" name="filter-color" value="Белый">
+              <label for="color-white">Белый</label>
             </p>
-           </div>
-         </li>
-        <li class="catalog-item">
-          <h3><a href="#">Непотопляемая селфи-палка</a></h3>
-          <span>2 500 руб.</span>
-          <div class="catalog-image">
-            <img src="http://placehold.it/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
-            <p class="catalog-add">
-              <a class="button" href="#">В корзину</a>
-              <a href="#">Добавить к сравнению</a>
+            <p class="filter-row">
+              <input id="color-blue" class="filter-input filter-input-checkbox" type="checkbox" name="filter-color" value="Синий" checked>
+              <label for="color-blue">Синий</label>
             </p>
-           </div>
-         </li>
-        <li class="catalog-item">
-          <h3><a href="#">Селфи-палка «Следуй за мной»</a></h3>
-          <span>4 900 руб.</span>
-          <div class="catalog-image catalog-image-new">
-            <img src="http://placehold.it/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-            <p class="catalog-add">
-              <a class="button" href="#">В корзину</a>
-              <a href="#">Добавить к сравнению</a>
+            <p class="filter-row">
+              <input id="color-red" class="filter-input filter-input-checkbox" type="checkbox" name="filter-color" value="Красный" checked>
+              <label for="color-red">Красный</label>
             </p>
-          </div>
-         </li>
-      </ul>
+            <p class="filter-row">
+              <input id="color-pink" class="filter-input filter-input-checkbox" type="checkbox" name="filter-color" value="Розовый">
+              <label for="color-pink">Розовый</label>
+            </p>
+          </fieldset>
 
-      <!-- Пагинация -->
-        <ul class="pagination">
-          <li class="pagination-back"><a>Назад</a></li>
-          <li class="pagination-current"><a>1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li class="pagination-next"><a href="#">Вперед</a></li>
+          <!-- Bluetooth -->
+          <fieldset class="filter-fields">
+            <legend class="filter-title">Bluetooth</legend>
+            <p class="filter-row">
+              <input id="bluetooth-yes" class="filter-input filter-input-radio" type="radio" name="filter-bluetooth" value="Есть" checked>
+              <label for="bluetooth-yes">Есть</label>
+            </p>
+            <p class="filter-row">
+              <input id="bluetooth-no" class="filter-input filter-input-radio" type="radio" name="filter-bluetooth" value="Нет">
+              <label for="bluetooth-no">Нет</label>
+            </p>
+          </fieldset>
+
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+
+      <!-- Каталог товаров -->
+      <section class="catalog right-block">
+        <h2 class="visually-hidden">Каталог товаров</h2>
+
+        <!-- Сортировка -->
+        <form class="sort" action="index.html" method="get">
+          <!-- Пока не понимаю как сортировку размечать -->
+        </form>
+
+        <!-- Список товаров -->
+        <ul class="catalog-list">
+          <li class="catalog-item">
+            <div class="catalog-image">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Любительская селфи-палка">
+              <p class="catalog-add">
+                <a class="button" href="#">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
+              </p>
+             </div>
+             <div class="catalog-text">
+              <h3 class="catalog-title"><a href="#">Любительская селфи-палка</a></h3>
+              <span class="catalog-price">500 руб.</span>
+             </div>
+           </li>
+          <li class="catalog-item">
+            <div class="catalog-image">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Профессиональная селфи-палка">
+              <p class="catalog-add">
+                <a class="button" href="#">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
+              </p>
+             </div>
+             <div class="catalog-text">
+              <h3 class="catalog-title"><a href="#">Профессиональная селфи-палка</a></h3>
+              <span class="catalog-price">1 500 руб.</span>
+             </div>
+           </li>
+          <li class="catalog-item">
+            <div class="catalog-image">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Непотопляемая селфи-палка">
+              <p class="catalog-add">
+                <a class="button" href="#">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
+              </p>
+             </div>
+             <div class="catalog-text">
+              <h3 class="catalog-title"><a href="#">Непотопляемая селфи-палка</a></h3>
+              <span class="catalog-price">2 500 руб.</span>
+             </div>
+           </li>
+          <li class="catalog-item">
+            <div class="catalog-image">
+              <img src="http://placehold.it/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+              <p class="catalog-add">
+                <a class="button" href="#">В корзину</a>
+                <a href="#">Добавить к сравнению</a>
+              </p>
+             </div>
+             <div class="catalog-text">
+              <h3 class="catalog-title"><a href="#">Селфи-палка «Следуй за мной»</a></h3>
+              <span class="catalog-price">4 900 руб.</span>
+             </div>
+           </li>
         </ul>
-    </section>
+
+        <!-- Пагинация -->
+          <ul class="pagination">
+            <li class="pagination-back"><a>Назад</a></li>
+            <li class="pagination-current"><a>1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li class="pagination-next"><a href="#">Вперед</a></li>
+          </ul>
+      </section>
+    </div>
   </main>
 
   <!-- Подвал -->
   <footer class="main-footer">
     <!-- Верхний блок подвала -->
     <div class="main-footer-top">
-      <a class="logo" href="index.html">
+      <a class="logo">
         <img src="http://placehold.it/163x35" width="163" height="35" alt="Логотип Девайс">
       </a>
       <ul class="user-list">
-        <li><a class="user-link" href="profile.html">Валентин Петухов</a></li>
-        <li><a href="index.html">Выйти</a></li>
-      </ul>
-      <ul class="cart-list">
-        <li><a class="cart-compare" href="#">Сравнить</a></li>
-        <li><a class="cart-link" href="#">Корзина</a></li>
+        <li class="user-item"><a class="user-login" href="profile.html">Валентин Петухов</a></li>
+        <li class="user-item"><a class="user-link" href="index.html">Выйти</a></li>
+        <li class="user-item"><a class="user-compare" href="#">Сравнить</a></li>
+        <li class="user-item"><a class="user-cart" href="#">Корзина</a></li>
       </ul>
     </div>
+
     <!-- Центральный блок подвала -->
     <div class="main-footer-middle">
-      <address>г. Москва, ул. Строителей, 15</address>
+      <p class="address-footer">г. Москва, ул. Строителей, 15</p>
       <ul class="nav-list">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Доставка</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Гарантия</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
       </ul>
-      <address>Тел.: +7 (495) 495-95-95</address>
+      <p class="address-footer">Тел.: +7 (495) 495-95-95</p>
     </div>
+
     <!-- Нижний блок подвала -->
     <div class="main-footer-bottom">
       <ul class="social">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li class="social-item"><a class="social-link" href="#">Facebook</a></li>
+        <li class="social-item"><a class="social-link" href="#">Instagram</a></li>
+        <li class="social-item"><a class="social-link" href="#">Twitter</a></li>
       </ul>
       <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </div>
