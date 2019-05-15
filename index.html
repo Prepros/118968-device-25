@@ -1,337 +1,428 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <title>Главная страница - Интернет магазан Девайс</title>
+	<!-- Мета данные-->
+	<meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<title>Главная страница - Интернет магазин гаджетов Device</title>
+
+	<!-- Иконки -->
+	<link rel="icon" type="image/x-icon" href="#"><!-- Есть ли еще какие нибудь обязательные мета данные ???-->
+	<link rel="icon" type="image/png" href="#">
+
+	<!-- Стили -->
+	<link rel="stylesheet" href="#">
 </head>
 <body>
-  <!-- Шапка -->
-  <header class="main-header">
-    <!-- Верхний блок -->
-    <div class="main-header-top">
-      <a class="logo">
-        <img src="http://placehold.it/163x35" width="163" height="35" alt="Логотип Девайс">
-      </a>
-    </div>
+	<!-- Шапка -->
+	<header class="main-header">
+		<div class="container">
+			<!-- Верхний блок шапки -->
+			<div class="main-header-top">
+				<!-- Логотип -->
+				<a class="logo">
+					<img class="logo-img" src="img/logo.svg" width="163" height="35" alt="Логотип Барбершоп Бородинский">
+				</a>
+			</div>
 
-    <!-- Центральный блок -->
-    <div class="main-header-middle">
-      <form class="search" action="index.html" method="get">
-        <label class="search-icon">
-          <input class="search-input" type="text" name="search" value="" placeholder="Поиск по сайту">
-        </label>
-        <button class="search-button" type="submit">Найти</button>
-      </form>
-      <ul class="user-list">
-        <li class="user-item"><a class="user-login" href="catalog.html">Войти</a></li>
-        <li class="user-item"><a class="user-compare" href="#">Сравнить</a></li>
-        <li class="user-item"><a class="user-cart" href="#">Корзина</a></li>
-      </ul>
-    </div>
+			<!-- Центральный блок шапки -->
+			<div class="main-header-middle">
+				<!-- Форма поиска -->
+				<form class="main-search" action="index.html" method="get">
+					<p class="main-search-box">
+						<input class="main-search-input" type="text" name="search" placeholder="Поиск по сайту">
+						<button class="main-search-button" type="submit">Найти</button>
+					</p>
+				</form>
 
-    <!-- Нижний блок -->
-    <nav class="main-header-bottom nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link" href="catalog.html">Каталог товаров</a>
-          <ul class="nav-list-second">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Виртуальная реальность</a>
-              <a class="nav-link" href="#">Моноподы для селфи</a>
-              <a class="nav-link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Фитнес-браслеты</a>
-              <a class="nav-link" href="#">Умные часы</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
-         </li>
-        <li class="nav-item"><a class="nav-link" href="#">Доставка</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Гарантия</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-      </ul>
-    </nav>
-  </header>
+				<!-- Пользовательское меню -->
+				<ul class="user-menu">
+					<li class="user-menu-item">
+						<a class="user-menu-link icon-people" href="catalog.html">Войти</a>
+					</li>
+					<li class="user-menu-item">
+						<a class="user-menu-link icon-compare" href="#">Сравнить</a>
+					</li>
+					<li class="user-menu-item">
+						<a class="user-menu-link icon-cart" href="#">Корзина</a>
+					</li>
+				</ul>
+			</div>
 
-  <!-- Основное содержимое -->
-  <main class="container">
-    <h1 class="visually-hidden">Интернет магазан электронных гаджетов Девайс</h1>
+			<!-- Нижний блок шапки -->
+			<div class="main-header-bottom">
+				<!-- Навигация -->
+				<nav class="main-navigation">
+					<ul class="main-navigation-primary">
+						<!-- Выпадающее меню -->
+						<li class="main-navigation-item">
+							<a class="main-navigation-link" href="catalog.html">Каталог товаров</a>
+							<ul class="main-navigation-secondary">
+								<li class="main-navigation-item">
+									<a class="main-navigation-link" href="#">Виртуальная реальность</a>
+									<a class="main-navigation-link" href="#">Моноподы для селфи</a>
+									<a class="main-navigation-link" href="#">Экшн-камеры</a>
+								</li>
+								<li class="main-navigation-item">
+									<a class="main-navigation-link" href="#">Фитнес-браслеты</a>
+									<a class="main-navigation-link" href="#">Умные часы</a>
+								</li>
+								<li class="main-navigation-item">
+									<a class="main-navigation-link" href="#">Квадрокоптеры</a>
+								</li>
+							</ul>
+						</li>
 
-    <!-- Слайдшоу -->
-    <section class="slideshow">
-      <h2 class="visually-hidden">Слайдшоу товаров</h2>
+						<!-- Простые ссылки -->
+						<li class="main-navigation-item">
+							<a class="main-navigation-link" href="#">Доставка</a>
+						</li>
+						<li class="main-navigation-item">
+							<a class="main-navigation-link" href="#">Гарантии</a>
+						</li>
+						<li class="main-navigation-item">
+							<a class="main-navigation-link" href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
 
-      <!-- Список слайдов -->
-      <ul class="slideshow-list">
-        <li class="slideshow-item slideshow-item-current">
-          <!-- Картинка товара -->
-          <div class="slideshow-img left-block">
-            <img src="http://placehold.it/383x485" width="383" height="485" alt="Самая длинная палка для селфи">
-          </div>
+	<!-- Основное содержимое -->
+	<main class="main-content">
+		<h1 class="visually-hidden">Интернет магазин гаджетов Device</h1>
 
-          <!-- Описание товара -->
-          <div class="slideshow-info right-block">
-            <b class="slideshow-title">Делай селфи, как Бен Стиллер!</b>
-            <p class="slideshow-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a class="button slideshow-button" href="#">Подробнее</a>
-            <table class="slideshow-feature">
-              <tr class="slideshow-row">
-                <td class="slideshow-col">8,5 м</td>
-                <td class="slideshow-col">5 кг</td>
-                <td class="slideshow-col">Карбон</td>
-              </tr>
-              <tr class="slideshow-row">
-                <td class="slideshow-col">Длина палки</td>
-                <td class="slideshow-col">Вес палки</td>
-                <td class="slideshow-col">Материал</td>
-              </tr>
-            </table>
-          </div>
-        </li>
-        <li class="slideshow-item">
-          <!-- Картинка товара -->
-          <div class="slideshow-img left-block">
-            <img src="http://placehold.it/383x485" width="383" height="485" alt="Мотивирующий фитнес браслет">
-          </div>
+		<div class="container">
+			<!-- Слайдшоу контайнер -->
+			<section class="main-slider">
+				<h2 class="visually-hidden">Слайдшоу популярных товаров</h2>
 
-          <!-- Описание товара -->
-          <div class="slideshow-info right-block">
-            <b class="slideshow-title">Худеем правильно!</b>
-            <p class="slideshow-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a class="button slideshow-button" href="#">Подробнее</a>
-            <table class="slideshow-feature">
-              <tr class="slideshow-row">
-                <td class="slideshow-col">48 часов</td>
-              </tr>
-              <tr class="slideshow-row">
-                <td class="slideshow-col">Без перезарядки</td>
-              </tr>
-            </table>
-          </div>
-        </li>
-        <li class="slideshow-item">
-          <!-- Картинка товара -->
-          <div class="slideshow-img left-block">
-            <img src="http://placehold.it/383x485" width="383" height="485" alt="Квадракоптер">
-          </div>
+				<!-- Слайдшоу -->
+				<ul class="main-slider-list">
+					<!-- Первый слайд активный -->
+					<li class="main-slider-item active">
+						<!-- Блок с миниатюрой -->
+						<figure class="left-block"><!-- Здесь figure пойдет ???-->
+							<img class="main-slider-img" src="img/slider-1.png" width="384" height="486" alt="Миниатюра длинной палки для селфи" aria-labelledby="slider-desc-1"><!-- В дополнительных материалах прочитал про атрибут longdesc, правильно ли я его использовал ???-->
+						</figure>
 
-          <!-- Описание товара -->
-          <div class="slideshow-info right-block">
-            <b class="slideshow-title">Порхает как бабочка, жалит как пчела!</b>
-            <p class="slideshow-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="button slideshow-button" href="#">Подробнее</a>
-            <table class="slideshow-feature">
-              <tr class="slideshow-row">
-                <td class="slideshow-col">800 м</td>
-                <td class="slideshow-col">50 м</td>
-              </tr>
-              <tr class="slideshow-row">
-                <td class="slideshow-col">Дальность полета</td>
-                <td class="slideshow-col">Радиус поражения</td>
-              </tr>
-            </table>
-          </div>
-        </li>
-      </ul>
+						<!-- Блок с описанием -->
+						<div class="right-block">
+							<h2 class="page-title">Делай селфи, как Бен Стиллер!</h2>
+							<p id="slider-desc-1">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+							<a class="button main-slider-button">Подробнее</a>
+							<table class="main-slider-table">
+								<tr><!-- Можно ли не задавать строкам и столбцам таблицы классы ???-->
+									<td>8,5 м</td>
+									<td>5 кг</td>
+									<td>Карбон</td>
+								</tr>
+								<tr>
+									<th>Длина палки</th><!-- Можно ли <th> прописывать ниже <td> ???-->
+									<th>Вес палки</th>
+									<th>Материал</th>
+								</tr>
+							</table>
+						</div>
+					</li>
 
-      <!-- Пагинация по слайдам -->
-      <ul class="controls">
-        <li class="controls-item-current"><a>1</a></li>
-        <li class="controls-item"><a class="controls-link" href="#">2</a></li>
-        <li class="controls-item"><a class="controls-link" href="#">3</a></li>
-      </ul>
-    </section>
+					<!-- Второй слайд -->
+					<li class="main-slider-item">
+						<!-- Блок с миниатюрой -->
+						<figure class="left-block">
+							<img class="main-slider-img" src="img/slider-2.png" width="345" height="485" alt="Миниатюра мотивирующего фитнес браслета" aria-labelledby="slider-desc-2">
+						</figure>
 
-    <!-- Категории продуктов -->
-    <section class="product-category">
-      <h2 class="visually-hidden">Категории продуктов</h2>
+						<!-- Блок с описанием -->
+						<div class="right-block">
+							<h2 class="page-title">Худеем правильно!</h2>
+							<p id="slider-desc-2">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+							<a class="button main-slider-button">Подробнее</a>
+							<table class="main-slider-table">
+								<tr>
+									<td>48 часов</td>
+								</tr>
+								<tr>
+									<th>Без перезарядки</th>
+								</tr>
+							</table>
+						</div>
+					</li>
 
-      <ul class="product-category-list">
-        <li class="product-category-item">
-          <a class="product-category-link" href=#>
-            <img class="product-category-img" src="http://placehold.it/160x160" width="160" height="160" alt="3d очки">
-            <h3 class="product-category-title">Виртуальная реальность</h3>
-          </a>
-        </li>
-        <li class="product-category-item">
-          <a class="product-category-link" href=#>
-            <img class="product-category-img" src="http://placehold.it/160x160" width="160" height="160" alt="Монопод для селфи">
-            <h3 class="product-category-title">Моноподы для селфи</h3>
-          </a>
-        </li>
-        <li class="product-category-item">
-          <a class="product-category-link" href=#>
-            <img class="product-category-img" src="http://placehold.it/160x160" width="160" height="160" alt="Экшн-камера">
-            <h3 class="product-category-title">Экшн-камеры</h3>
-          </a>
-        </li>
-        <li class="product-category-item">
-          <a class="product-category-link" href=#>
-            <img class="product-category-img" src="http://placehold.it/160x160" width="160" height="160" alt="Фитнес-браслет">
-            <h3 class="product-category-title">Фитнес-браслеты</h3>
-          </a>
-        </li>
-        <li class="product-category-item">
-          <a class="product-category-link" href=#>
-            <img class="product-category-img" src="http://placehold.it/160x160" width="160" height="160" alt="Умные часы">
-            <h3 class="product-category-title">Умные часы</h3>
-          </a>
-        </li>
-        <li class="product-category-item">
-          <a class="product-category-link" href=#>
-            <img class="product-category-img" src="http://placehold.it/160x160" width="160" height="160" alt="Квадрокоптер">
-            <h3 class="product-category-title">Квадрокоптеры</h3>
-          </a>
-        </li>
-      </ul>
-    </section>
+					<!-- Третий слайд -->
+					<li class="main-slider-item">
+						<!-- Блок с миниатюрой -->
+						<figure class="left-block">
+							<img class="main-slider-img" src="img/slider-3.png" width="526" height="334" alt="Миниатюра квадракоптера оснащенного лазером" aria-labelledby="slider-desc-3">
+						</figure>
 
-    <!-- Блок поручительства -->
-    <section class="assurance">
-      <h2 class="visually-hidden">Мы поручаемся</h2>
+						<!-- Блок с описанием -->
+						<div class="right-block">
+							<h2 class="page-title">Порхает как бабочка, жалит как пчела!</h2>
+							<p id="slider-desc-3">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+							<a class="button main-slider-button">Подробнее</a>
+							<table class="main-slider-table">
+								<tr>
+									<td>800 м</td>
+									<td>50 м</td>
+								</tr>
+								<tr>
+									<th>Дальность полета</th>
+									<th>Радиус поражения</th>
+								</tr>
+							</table>
+						</div>
+					</li>
+				</ul>
 
-      <!-- Блок с ссылками -->
-      <ul class="assurance-controls">
-        <li class="controls-item controls-item-current">
-          <a class="controls-link" href="#">Доставка</a>
-        </li>
-        <li class="controls-item">
-          <a class="controls-link" href="#">Гарантия</a>
-        </li>
-        <li class="controls-item">
-          <a class="controls-link" href="#">Кредит</a>
-        </li>
-      </ul>
+				<!-- Переключатели слайдера -->
+				<ul class="main-slider-controls slide-control">
+					<li class="slide-control-item active">
+						<a class="slide-control-link">1</a>
+					</li>
+					<li class="slide-control-item">
+						<a class="slide-control-link" href="#">2</a>
+					</li>
+					<li class="slide-control-item">
+						<a class="slide-control-link" href="#">3</a>
+					</li>
+				</ul>
+			</section><!-- Слайдшоу контайнер -->
 
-      <!-- Блок с содержимым -->
-      <ul class="assurance-list">
-        <li class="assurance-item assurance-item-delivery assurance-item-current">
-          <h3 class="assurance-title">Доставка</h3>
-          <p class="assurance-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-        </li>
-        <li class="assurance-item assurance-item-warranty">
-          <h3 class="assurance-title">Гарантия</h3>
-          <p class="assurance-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-Товар, не дом, конечно же.</p>
-        </li>
-        <li class="assurance-item assurance-item-credit">
-          <h3 class="assurance-title">Кредит</h3>
-          <p class="assurance-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
-условия кредита. Выгодные для нашего банка, разумеется.</p>
-        </li>
-      </ul>
-    </section>
+			<!-- Категории товаров -->
+			<section class="box-category">
+				<h2 class="visually-hidden">Категории товаров</h2>
 
-    <!-- Блок поручительства -->
-    <section class="brands">
-      <h2 class="visually-hidden">Брэнды производителей</h2>
+				<!-- Список категорий -->
+				<ul class="box-category-list">
+					<li class="box-category-item">
+						<a class="box-category-link" href="#"><!-- Эти картинки чере <img> или через стили задавать ???-->
+							<img class="box-category-img" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+							<h3 class="box-category-title">Виртуальная реальность</h3>
+						</a>
+					</li>
+					<li class="box-category-item">
+						<a class="box-category-link" href="#">
+							<img class="box-category-img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+							<h3 class="box-category-title">Моноподы для селфи</h3>
+						</a>
+					</li>
+					<li class="box-category-item">
+						<a class="box-category-link" href="#">
+							<img class="box-category-img" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+							<h3 class="box-category-title">Экшн-камеры</h3>
+						</a>
+					</li>
+					<li class="box-category-item">
+						<a class="box-category-link" href="#">
+							<img class="box-category-img" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+							<h3 class="box-category-title">Фитнес-браслеты</h3>
+						</a>
+					</li>
+					<li class="box-category-item">
+						<a class="box-category-link" href="#">
+							<img class="box-category-img" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+							<h3 class="box-category-title">Умные часы</h3>
+						</a>
+					</li>
+					<li class="box-category-item">
+						<a class="box-category-link" href="#">
+							<img class="box-category-img" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+							<h3 class="box-category-title">Квадрокоптеры</h3>
+						</a>
+					</li>
+				</ul>
+			</section><!-- Категории товаров -->
 
-      <ul class="brands-list">
-        <li class="brands-item">
-          <a class="brands-link" href="#"><img class="brands-img" src="http://placehold.it/260x100" width="260" height="100" alt="Dji"></a>
-        </li>
-        <li class="brands-item">
-          <a class="brands-link" href="#"><img class="brands-img" src="http://placehold.it/260x100" width="260" height="100" alt="SpAdgets"></a>
-        </li>
-        <li class="brands-item">
-          <a class="brands-link" href="#"><img class="brands-img" src="http://placehold.it/260x100" width="260" height="100" alt="GoPro"></a>
-        </li>
-        <li class="brands-item">
-          <a class="brands-link" href="#"><img class="brands-img" src="http://placehold.it/260x100" width="260" height="100" alt="Vive"></a>
-        </li>
-      </ul>
-    </section>
+			<!-- Сервисы -->
+			<section class="services">
+				<h2 class="visually-hidden">Сервисы</h2>
 
-    <!-- О нас -->
-    <section class="about-company">
-      <div class="about left-block">
-        <h2 class="page-title">О нас</h2>
-        <p class="page-description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p class="page-description">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul class="about-list">
-          <li class="about-item">Деловые Линии</li>
-          <li class="about-item">Автотрейдинг</li>
-          <li class="about-item">ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="button about-button" href="#">Подробнее о нас</a>
-      </div>
+				<!-- Блок с ссылками -->
+				<ul class="services-controls controls">
+					<li class="controls-item active">
+						<a class="controls-link" href="#">Доставка</a>
+					</li>
+					<li class="controls-item">
+						<a class="controls-link" href="#">Гарантия</a>
+					</li>
+					<li class="controls-item">
+						<a class="controls-link" href="#">Кредит</a>
+					</li>
+				</ul>
 
-      <div class="contacts right-block">
-        <h2 class="page-title">Контакты</h2>
-        <p class="page-description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img class="contacts-map" src="http://placehold.it/560x222" width="560" height="222" alt="Карта">
-        <a class="button contacts-button" href="#">Напишите нам</a>
-      </div>
-    </section>
-  </main>
+				<!-- Блок с содержимым -->
+				<ul class="services-list">
+					<li class="services-item services-item-delivery active">
+						<h3 class="page-title">Доставка</h3>
+						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+					</li>
+					<li class="services-item services-item-warranty">
+						<h3 class="page-title">Гарантия</h3>
+						<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+					</li>
+					<li class="services-item services-item-credit">
+						<h3 class="page-title">Кредит</h3>
+						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+					</li>
+				</ul>
 
-  <!-- Подвал -->
-  <footer class="main-footer">
-    <!-- Верхний блок подвала -->
-    <div class="main-footer-top">
-      <a class="logo">
-        <img src="http://placehold.it/163x35" width="163" height="35" alt="Логотип Девайс">
-      </a>
-      <ul class="user-list">
-        <li class="user-item"><a class="user-login" href="catalog.html">Войти</a></li>
-        <li class="user-item"><a class="user-compare" href="#">Сравнить</a></li>
-        <li class="user-item"><a class="user-cart" href="#">Корзина</a></li>
-      </ul>
-    </div>
+			</section><!-- Мы поручаемся -->
 
-    <!-- Центральный блок подвала -->
-    <div class="main-footer-middle">
-      <p class="address-footer">г. Москва, ул. Строителей, 15</p>
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="#">Доставка</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Гарантия</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-      </ul>
-      <p class="address-footer">Тел.: +7 (495) 495-95-95</p>
-    </div>
+			<!-- Мы поручаемся -->
+			<section class="brands">
+				<h2 class="visually-hidden">Наши партнеры</h2>
 
-    <!-- Нижний блок подвала -->
-    <div class="main-footer-bottom">
-      <ul class="social">
-        <li class="social-item"><a class="social-link" href="#">Facebook</a></li>
-        <li class="social-item"><a class="social-link" href="#">Instagram</a></li>
-        <li class="social-item"><a class="social-link" href="#">Twitter</a></li>
-      </ul>
-      <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-    </div>
-  </footer>
+				<ul class="brands-list">
+					<li class="brands-item">
+						<a class="brands-link" href="#"><img class="brands-img" src="img/brands-1.png" width="260" height="100" alt="DJI"></a>
+					</li>
+					<li class="brands-item">
+						<a class="brands-link" href="#"><img class="brands-img" src="img/brands-2.png" width="260" height="100" alt="SP Adgets"></a>
+					</li>
+					<li class="brands-item">
+						<a class="brands-link" href="#"><img class="brands-img" src="img/brands-3.png" width="260" height="100" alt="GoPro"></a>
+					</li>
+					<li class="brands-item">
+						<a class="brands-link" href="#"><img class="brands-img" src="img/brands-4.png" width="260" height="100" alt="Vive"></a>
+					</li>
+				</ul>
+			</section><!-- Мы поручаемся -->
 
-  <!-- Модальное окно - Напишите нам -->
-  <section class="modal modal-message">
-    <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="modal-message-form" action="index.html" method="post">
-      <p class="modal-message-row">
-        <label class="modal-message-title" for="message-name">Ваше имя:</label>
-        <input id="message-name" class="modal-message-input" type="text" name="message-name" value="" placeholder="Имя Фамилия">
-      </p>
-      <p class="modal-message-row">
-        <label class="modal-message-title" for="message-email">Ваш email:</label>
-        <input id="message-email" class="modal-message-input" type="text" name="message-email" value="" placeholder="Имя Фамилия">
-      </p>
-      <p class="modal-message-row">
-        <label class="modal-message-title" for="message-text">Текст письма:</label>
-        <textarea id="message-text" name="message-text" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button modal-message-button" type="submit">Отправить</button>
-    </form>
-    <span class="modal-close">x</span>
-  </section>
+			<!-- Инфомация о компании -->
+			<div class="about-company"><!-- Здесь все таки решил делать как по лекции, так как объясняли если блоки можно как то конкретно назвать и дать им заголовок то это <section> ???-->
+				<!-- О нас -->
+				<section class="about left-block"><!-- Нужен ли тут класс left-block или можно оцентровку задать в .about ???-->
+					<h2 class="page-title">О нас</h2>
+					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+					<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+					<ul>
+						<li>Деловые Линии</li>
+						<li>Автотрейдинг</li>
+						<li>ЖелДорЭкспедиция</li>
+					</ul>
+					<a class="button about-button" href="#">Подробнее о нас</a>
+				</section>
 
-  <!-- Модальное окно - Карта проезда -->
-  <section class="modal modal-map">
-    <h2 class="visually-hidden">Карта проезда</h2>
-    <img src="http://placehold.it/960x559" width="960" height="559" alt="Карта проезда">
-    <span class="modal-close">x</span>
-  </section>
+				<!-- Контакты -->
+				<section class="contact left-block">
+					<h2 class="page-title">Контакты</h2>
+					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+					<img class="contact-img" src="img/map.jpg" width="560" height="222" alt="Карта проезда">
+					<a class="button contact-button" href="#">Напишите нам</a><!-- Нужно ли <a> оборачивать в тег <p> ???-->
+				</section>
+			</div><!-- Инфомация о компании -->
+
+		</div><!-- .container -->
+	</main>
+
+	<!-- Подвал -->
+	<footer class="main-footer">
+		<div class="container">
+			<!-- Верхний блок подвала -->
+			<div class="main-footer-top">
+				<!-- Логотип -->
+				<a class="logo">
+					<img class="logo-img" src="img/logo.svg" width="163" height="35" alt="Логотип Барбершоп Бородинский">
+				</a>
+
+				<!-- Пользовательское меню -->
+				<ul class="user-menu">
+					<li class="user-menu-item">
+						<a class="user-menu-link icon-people" href="catalog.html">Войти</a>
+					</li>
+					<li class="user-menu-item">
+						<a class="user-menu-link icon-compare" href="#">Сравнить</a>
+					</li>
+					<li class="user-menu-item">
+						<a class="user-menu-link icon-cart" href="#">Корзина</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Центральный блок подвала -->
+			<div class="main-footer-middle">
+				<p>г. Москва, ул. Строителей, 15</p>
+
+				<!-- Навигация -->
+				<ul class="footer-navigation"><!-- Ничего страшного что для этих же ссылок задал другой класс, в фотере они другим цветом ???-->
+					<li class="footer-navigation-item">
+						<a class="footer-navigation-link" href="#">Доставка</a>
+					</li>
+					<li class="footer-navigation-item">
+						<a class="footer-navigation-link" href="#">Гарантии</a>
+					</li>
+					<li class="footer-navigation-item">
+						<a class="footer-navigation-link" href="#">Контакты</a>
+					</li>
+				</ul>
+
+				<p>Тел.: +7 (495) 495-95-95</p>
+			</div>
+
+			<!-- Нижний блок подвала -->
+			<div class="main-footer-bottom">
+				<!-- Нижний блок подвала -->
+				<ul class="social">
+					<li class="social-item">
+						<a class="social-link icon-facbook" href="#">Facebook</a>
+					</li>
+					<li class="social-item">
+						<a class="social-link icon-instagram" href="#">Instagram</a>
+					</li>
+					<li class="social-item">
+						<a class="social-link icon-twitter" href="#">Twitter</a>
+					</li>
+				</ul>
+
+				<!-- Нижний блок подвала -->
+				<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+			</div>
+
+		</div><!-- .container -->
+	</footer>
+
+	<!-- Модальное окно обратной связи -->
+	<section class="modal modal-contact">
+		<h2 class="visually-hidden">Отправьте нам письмо</h2>
+
+		<!-- Форма обратной связи -->
+		<form class="modal-contact-form" action="index.html" method="post">
+			<p class="modal-contact-item left-block"><!-- Как лучше задать отдельный класс влево вправо, или через :nth-child(1) ..(2) ???-->
+				<label class="modal-contact-title" for="name-contact">Ваше имя:</label>
+				<input class="modal-contact-input" id="name-contact" type="text" name="name" value="" placeholder="Имя Фамилия">
+			</p>
+			<p class="modal-contact-item right-block">
+				<label class="modal-contact-title" for="email-contact">Ваш email:</label>
+				<input class="modal-contact-input" id="email-contact" type="text" name="email" value="" placeholder="email@example.com">
+			</p>
+			<p class="modal-contact-item">
+				<label class="modal-contact-title" for="text-contact">Текст письма:</label>
+				<textarea class="modal-contact-textarea" id="text-contact" placeholder="В свободной форме"></textarea>
+			</p>
+			<button class="button modal-contact-button" type="submit">Отправить</button>
+		</form>
+
+		<!-- Закрыть модальное окно -->
+		<span class="modal-close">Закрыть модальное окно</span>
+	</section><!-- Модальное окно обратной связи -->
+
+	<!-- Модальное окно карты проезда -->
+	<section class="modal modal-map">
+		<h2 class="visually-hidden">Карта проезда</h2>
+
+		<a class="modal-map-link" href="https://yandex.ru/map">
+			<img class="modal-map-img" src="img/map-big.jpg" width="960" height="559" alt="Карта проезда">
+		</a>
+
+		<!-- Закрыть модальное окно -->
+		<span class="modal-close">Закрыть модальное окно</span>
+	</section><!-- Модальное окно карты проезда -->
+
+	<!-- Скрипты -->
+	<script src="#"></script>
 </body>
 </html>
