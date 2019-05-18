@@ -9,7 +9,7 @@
 	<title>Главная страница - Интернет магазин гаджетов Device</title>
 
 	<!-- Иконки -->
-	<link rel="icon" type="image/x-icon" href="#"><!-- Есть ли еще какие нибудь обязательные мета данные ???-->
+	<link rel="icon" type="image/x-icon" href="#">
 	<link rel="icon" type="image/png" href="#">
 
 	<!-- Стили -->
@@ -23,7 +23,9 @@
 			<div class="main-header-top">
 				<!-- Логотип -->
 				<a class="logo">
-					<img class="logo-img" src="img/logo.svg" width="163" height="35" alt="Логотип Барбершоп Бородинский">
+          <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" width="163" height="35" viewBox="0 0 163 35" aria-label="Логотип Барбершоп Бородинский">
+              <path fill="#000" d="M-.151.702v33.6h13.532a15.72 15.72 0 0 0 11.72-4.824 16.458 16.458 0 0 0 4.712-11.976 16.458 16.458 0 0 0-4.712-11.976A15.723 15.723 0 0 0 13.381.702H-.151zM7.582 26.91V8.091h5.8a8.646 8.646 0 0 1 6.5 2.568 9.407 9.407 0 0 1 2.489 6.84 9.406 9.406 0 0 1-2.489 6.84 8.642 8.642 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3H42.378V8.091h13.291V.702H34.645v33.6H55.91V26.91H42.378v-5.952zm36.343 13.344L89.744.702h-8.458l-7.491 24.72L66.304.702h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.702h-7.733v33.6zm38.615-1.416a15.506 15.506 0 0 0 6.041-5.688l-6.67-3.84a7.482 7.482 0 0 1-3.165 3.024 9.87 9.87 0 0 1-4.664 1.1 9.595 9.595 0 0 1-7.177-2.736 9.909 9.909 0 0 1-2.682-7.248 9.909 9.909 0 0 1 2.682-7.248 9.595 9.595 0 0 1 7.177-2.736 9.897 9.897 0 0 1 4.639 1.08 7.592 7.592 0 0 1 3.19 3.048l6.67-3.84a15.873 15.873 0 0 0-6.09-5.688 17.42 17.42 0 0 0-8.409-2.088c-9.779-.272-17.797 7.691-17.591 17.472-.208 9.781 7.809 17.747 17.588 17.476a17.52 17.52 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085V8.091h13.29V.702h-21.023v33.6h21.265V26.91h-13.532v-5.952z" class="cls-1"/>
+          </svg>
 				</a>
 			</div>
 
@@ -105,23 +107,23 @@
 					<!-- Первый слайд активный -->
 					<li class="main-slider-item active">
 						<!-- Блок с миниатюрой -->
-						<figure class="left-block"><!-- Здесь figure пойдет ???-->
-							<img class="main-slider-img" src="img/slider-1.png" width="384" height="486" alt="Миниатюра длинной палки для селфи" aria-labelledby="slider-desc-1"><!-- В дополнительных материалах прочитал про атрибут longdesc, правильно ли я его использовал ???-->
-						</figure>
+						<div class="left-block">
+							<img class="main-slider-img" src="img/slider-1.png" width="384" height="486" alt="Миниатюра длинной палки для селфи">
+						</div>
 
 						<!-- Блок с описанием -->
 						<div class="right-block">
-							<h2 class="page-title">Делай селфи, как Бен Стиллер!</h2>
-							<p id="slider-desc-1">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+							<h3 class="page-title">Делай селфи, как Бен Стиллер!</h3>
+							<p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 							<a class="button main-slider-button">Подробнее</a>
 							<table class="main-slider-table">
-								<tr><!-- Можно ли не задавать строкам и столбцам таблицы классы ???-->
+								<tr>
 									<td>8,5 м</td>
 									<td>5 кг</td>
 									<td>Карбон</td>
 								</tr>
 								<tr>
-									<th>Длина палки</th><!-- Можно ли <th> прописывать ниже <td> ???-->
+									<th>Длина палки</th>
 									<th>Вес палки</th>
 									<th>Материал</th>
 								</tr>
@@ -132,14 +134,14 @@
 					<!-- Второй слайд -->
 					<li class="main-slider-item">
 						<!-- Блок с миниатюрой -->
-						<figure class="left-block">
-							<img class="main-slider-img" src="img/slider-2.png" width="345" height="485" alt="Миниатюра мотивирующего фитнес браслета" aria-labelledby="slider-desc-2">
-						</figure>
+						<div class="left-block">
+							<img class="main-slider-img" src="img/slider-2.png" width="345" height="485" alt="Миниатюра мотивирующего фитнес браслета">
+						</div>
 
 						<!-- Блок с описанием -->
 						<div class="right-block">
-							<h2 class="page-title">Худеем правильно!</h2>
-							<p id="slider-desc-2">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+							<h3 class="page-title">Худеем правильно!</h3>
+							<p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
 							<a class="button main-slider-button">Подробнее</a>
 							<table class="main-slider-table">
 								<tr>
@@ -155,14 +157,14 @@
 					<!-- Третий слайд -->
 					<li class="main-slider-item">
 						<!-- Блок с миниатюрой -->
-						<figure class="left-block">
-							<img class="main-slider-img" src="img/slider-3.png" width="526" height="334" alt="Миниатюра квадракоптера оснащенного лазером" aria-labelledby="slider-desc-3">
-						</figure>
+						<div class="left-block">
+							<img class="main-slider-img" src="img/slider-3.png" width="526" height="334" alt="Миниатюра квадракоптера оснащенного лазером">
+						</div>
 
 						<!-- Блок с описанием -->
 						<div class="right-block">
-							<h2 class="page-title">Порхает как бабочка, жалит как пчела!</h2>
-							<p id="slider-desc-3">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+							<h3 class="page-title">Порхает как бабочка, жалит как пчела!</h3>
+							<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
 							<a class="button main-slider-button">Подробнее</a>
 							<table class="main-slider-table">
 								<tr>
@@ -199,38 +201,38 @@
 				<!-- Список категорий -->
 				<ul class="box-category-list">
 					<li class="box-category-item">
-						<a class="box-category-link" href="#"><!-- Эти картинки чере <img> или через стили задавать ???-->
-							<img class="box-category-img" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+						<a class="box-category-link icon-popular1" href="#">
+							<!--<img class="box-category-img" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">-->
 							<h3 class="box-category-title">Виртуальная реальность</h3>
 						</a>
 					</li>
 					<li class="box-category-item">
-						<a class="box-category-link" href="#">
-							<img class="box-category-img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+						<a class="box-category-link icon-popular2" href="#">
+							<!--<img class="box-category-img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">-->
 							<h3 class="box-category-title">Моноподы для селфи</h3>
 						</a>
 					</li>
 					<li class="box-category-item">
-						<a class="box-category-link" href="#">
-							<img class="box-category-img" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+						<a class="box-category-link icon-popular3" href="#">
+							<!--<img class="box-category-img" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">-->
 							<h3 class="box-category-title">Экшн-камеры</h3>
 						</a>
 					</li>
 					<li class="box-category-item">
-						<a class="box-category-link" href="#">
-							<img class="box-category-img" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+						<a class="box-category-link icon-popular4" href="#">
+							<!--<img class="box-category-img" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">-->
 							<h3 class="box-category-title">Фитнес-браслеты</h3>
 						</a>
 					</li>
 					<li class="box-category-item">
-						<a class="box-category-link" href="#">
-							<img class="box-category-img" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+						<a class="box-category-link icon-popular5" href="#">
+							<!--<img class="box-category-img" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">-->
 							<h3 class="box-category-title">Умные часы</h3>
 						</a>
 					</li>
 					<li class="box-category-item">
-						<a class="box-category-link" href="#">
-							<img class="box-category-img" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+						<a class="box-category-link icon-popular6" href="#">
+							<!--<img class="box-category-img" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">-->
 							<h3 class="box-category-title">Квадрокоптеры</h3>
 						</a>
 					</li>
@@ -270,9 +272,9 @@
 					</li>
 				</ul>
 
-			</section><!-- Мы поручаемся -->
+			</section><!-- Сервисы -->
 
-			<!-- Мы поручаемся -->
+			<!-- Наши партнеры -->
 			<section class="brands">
 				<h2 class="visually-hidden">Наши партнеры</h2>
 
@@ -290,13 +292,15 @@
 						<a class="brands-link" href="#"><img class="brands-img" src="img/brands-4.png" width="260" height="100" alt="Vive"></a>
 					</li>
 				</ul>
-			</section><!-- Мы поручаемся -->
+			</section><!-- Наши партнеры -->
 
 			<!-- Инфомация о компании -->
-			<div class="about-company"><!-- Здесь все таки решил делать как по лекции, так как объясняли если блоки можно как то конкретно назвать и дать им заголовок то это <section> ???-->
+			<section class="about-company">
+        <h2 class="visually-hidden">Инфомация о компании</h2>
+
 				<!-- О нас -->
-				<section class="about left-block"><!-- Нужен ли тут класс left-block или можно оцентровку задать в .about ???-->
-					<h2 class="page-title">О нас</h2>
+				<div class="about">
+					<h3 class="page-title">О нас</h3>
 					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 					<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 					<ul>
@@ -305,16 +309,16 @@
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
 					<a class="button about-button" href="#">Подробнее о нас</a>
-				</section>
+				</div>
 
 				<!-- Контакты -->
-				<section class="contact left-block">
-					<h2 class="page-title">Контакты</h2>
+				<div class="contact">
+					<h3 class="page-title">Контакты</h3>
 					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 					<img class="contact-img" src="img/map.jpg" width="560" height="222" alt="Карта проезда">
-					<a class="button contact-button" href="#">Напишите нам</a><!-- Нужно ли <a> оборачивать в тег <p> ???-->
-				</section>
-			</div><!-- Инфомация о компании -->
+					<a class="button contact-button" href="#">Напишите нам</a>
+				</div>
+			</section><!-- Инфомация о компании -->
 
 		</div><!-- .container -->
 	</main>
@@ -326,7 +330,9 @@
 			<div class="main-footer-top">
 				<!-- Логотип -->
 				<a class="logo">
-					<img class="logo-img" src="img/logo.svg" width="163" height="35" alt="Логотип Барбершоп Бородинский">
+          <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" width="163" height="35" viewBox="0 0 163 35" aria-label="Логотип Барбершоп Бородинский">
+              <path fill="#ffc600" d="M-.151.702v33.6h13.532a15.72 15.72 0 0 0 11.72-4.824 16.458 16.458 0 0 0 4.712-11.976 16.458 16.458 0 0 0-4.712-11.976A15.723 15.723 0 0 0 13.381.702H-.151zM7.582 26.91V8.091h5.8a8.646 8.646 0 0 1 6.5 2.568 9.407 9.407 0 0 1 2.489 6.84 9.406 9.406 0 0 1-2.489 6.84 8.642 8.642 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3H42.378V8.091h13.291V.702H34.645v33.6H55.91V26.91H42.378v-5.952zm36.343 13.344L89.744.702h-8.458l-7.491 24.72L66.304.702h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.702h-7.733v33.6zm38.615-1.416a15.506 15.506 0 0 0 6.041-5.688l-6.67-3.84a7.482 7.482 0 0 1-3.165 3.024 9.87 9.87 0 0 1-4.664 1.1 9.595 9.595 0 0 1-7.177-2.736 9.909 9.909 0 0 1-2.682-7.248 9.909 9.909 0 0 1 2.682-7.248 9.595 9.595 0 0 1 7.177-2.736 9.897 9.897 0 0 1 4.639 1.08 7.592 7.592 0 0 1 3.19 3.048l6.67-3.84a15.873 15.873 0 0 0-6.09-5.688 17.42 17.42 0 0 0-8.409-2.088c-9.779-.272-17.797 7.691-17.591 17.472-.208 9.781 7.809 17.747 17.588 17.476a17.52 17.52 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085V8.091h13.29V.702h-21.023v33.6h21.265V26.91h-13.532v-5.952z" class="cls-1"/>
+          </svg>
 				</a>
 
 				<!-- Пользовательское меню -->
@@ -348,7 +354,7 @@
 				<p>г. Москва, ул. Строителей, 15</p>
 
 				<!-- Навигация -->
-				<ul class="footer-navigation"><!-- Ничего страшного что для этих же ссылок задал другой класс, в фотере они другим цветом ???-->
+				<ul class="footer-navigation">
 					<li class="footer-navigation-item">
 						<a class="footer-navigation-link" href="#">Доставка</a>
 					</li>
@@ -366,17 +372,17 @@
 			<!-- Нижний блок подвала -->
 			<div class="main-footer-bottom">
 				<!-- Нижний блок подвала -->
-				<ul class="social">
-					<li class="social-item">
-						<a class="social-link icon-facbook" href="#">Facebook</a>
-					</li>
-					<li class="social-item">
-						<a class="social-link icon-instagram" href="#">Instagram</a>
-					</li>
-					<li class="social-item">
-						<a class="social-link icon-twitter" href="#">Twitter</a>
-					</li>
-				</ul>
+        <ul class="social">
+          <li class="social-item">
+            <a class="social-link icon-facbook" href="#">Мы в Facebook</a>
+          </li>
+          <li class="social-item">
+            <a class="social-link icon-instagram" href="#">Мы в Instagram</a>
+          </li>
+          <li class="social-item">
+            <a class="social-link icon-twitter" href="#">Мы в Twitter</a>
+          </li>
+        </ul>
 
 				<!-- Нижний блок подвала -->
 				<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
@@ -391,15 +397,15 @@
 
 		<!-- Форма обратной связи -->
 		<form class="modal-contact-form" action="index.html" method="post">
-			<p class="modal-contact-item left-block"><!-- Как лучше задать отдельный класс влево вправо, или через :nth-child(1) ..(2) ???-->
+			<p class="modal-contact-item">
 				<label class="modal-contact-title" for="name-contact">Ваше имя:</label>
 				<input class="modal-contact-input" id="name-contact" type="text" name="name" value="" placeholder="Имя Фамилия">
 			</p>
-			<p class="modal-contact-item right-block">
+			<p class="modal-contact-item">
 				<label class="modal-contact-title" for="email-contact">Ваш email:</label>
 				<input class="modal-contact-input" id="email-contact" type="text" name="email" value="" placeholder="email@example.com">
 			</p>
-			<p class="modal-contact-item">
+			<p class="modal-contact-item wide">
 				<label class="modal-contact-title" for="text-contact">Текст письма:</label>
 				<textarea class="modal-contact-textarea" id="text-contact" placeholder="В свободной форме"></textarea>
 			</p>
@@ -407,7 +413,7 @@
 		</form>
 
 		<!-- Закрыть модальное окно -->
-		<span class="modal-close">Закрыть модальное окно</span>
+		<button class="modal-close" type="button" aria-label="Закрыть модальное окно">x</button>
 	</section><!-- Модальное окно обратной связи -->
 
 	<!-- Модальное окно карты проезда -->
@@ -419,7 +425,7 @@
 		</a>
 
 		<!-- Закрыть модальное окно -->
-		<span class="modal-close">Закрыть модальное окно</span>
+		<button class="modal-close" type="button" aria-label="Закрыть модальное окно">x</button>
 	</section><!-- Модальное окно карты проезда -->
 
 	<!-- Скрипты -->
