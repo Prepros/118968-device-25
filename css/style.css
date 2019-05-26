@@ -49,6 +49,8 @@ p {
   line-height: 30px;
   font-weight: 300;
   color: #000;
+
+  text-transform: none;
 }
 
 a {
@@ -94,11 +96,15 @@ button {
 }
 
 .page-title {
+  margin: 0;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
   color: #000;
+
+  text-transform: none;
 }
 
 .button {
@@ -125,6 +131,9 @@ button {
 /** Шапка **/
 .main-header {
   position: relative;
+
+  margin-bottom: 80px;
+
   background-color: #f7e296;
 }
 
@@ -353,7 +362,9 @@ button {
 
 
 /** Слайдшоу товаров **/
-.slider {}
+.slider {
+  margin-bottom: 80px;
+}
 
 .slider-list {
   margin: 0;
@@ -430,7 +441,9 @@ button {
 
 
 /** Категории товаров **/
-.category {}
+.category {
+  margin-bottom: 80px;
+}
 
 .category-list {
   display: flex;
@@ -483,3 +496,97 @@ button {
   margin: 0;
   font: inherit;
 }
+
+
+/** Сервисы **/
+.service {
+  margin-bottom: 80px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000;
+
+  background-color: #e5e5e5;
+
+  text-transform: uppercase;
+}
+
+.service .container {
+  display: flex;
+}
+
+.service-menu {
+  width: 300px;
+  margin: 0;
+  margin-right: 100px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.service-menu-item {
+  margin-bottom: 30px;
+}
+
+.service-menu-item.active .service-menu-link {
+  color: #f7e184;
+  background-color: #000;
+}
+
+.service-menu-link {
+  color: #000;
+}
+
+.service-content {
+  width: 760px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.service-content-item {
+  position: relative;
+  display: none;
+  padding-right: 300px;
+}
+
+.service-content-item.active {
+  display: block;
+}
+
+.service-content-item::after {
+  position: absolute;
+  top: 0;
+  right: 65px;
+
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.service-content-item.delivery::after {
+  width: 136px;
+  height: 164px;
+
+  background-image: url("../img/svg/delivery.svg");
+}
+
+.service-content-item.warranty::after {
+  width: 171px;
+  height: 195px;
+
+  background-image: url("../img/svg/warranty.svg");
+}
+
+.service-content-item.credit::after {
+  width: 156px;
+  height: 188px;
+
+  background-image: url("../img/svg/credit.svg");
+}
+
+.service-content-item.active {}
+.service-content-item h3 {}
+.service-content-item p {}
