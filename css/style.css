@@ -250,29 +250,36 @@ button {
   list-style: none;
 }
 
-.user-navigation li {
+/* Чему задавать шрифты ???*/
+.user-navigation-item {
   margin-right: 35px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #000;
 }
 
-.user-navigation li:last-child {
+.user-navigation-item:last-child {
   margin-right: 0;
 }
 
-.user-navigation li.right {
+.user-navigation-item.right {
   margin-left: auto;
 }
 
-.user-navigation a {
+.user-navigation-link {
   color: #000;
   text-decoration: none;
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation-link:hover,
+.user-navigation-link:focus {
   color: rgba(0, 0, 0, .6);
 }
 
-.user-navigation a:active {
+.user-navigation-link:active {
   color: rgba(0, 0, 0, .3);
 }
 
@@ -300,14 +307,17 @@ button {
   margin-right: 38px;
 }
 
-.site-navigation-item:first-child {
+.site-navigation-item:last-child {
+  margin-right: 0;
+}
+
+.main-header-bottom .site-navigation-item:first-child {
   width: 250px;
   margin-right: 290px;
 }
 
-.site-navigation-item:last-child {
+.main-header-bottom .site-navigation-item:last-child {
   margin-left: auto;
-  margin-right: 0;
 }
 
 .site-navigation-link {
@@ -664,4 +674,140 @@ button {
 
 .about-contact img {
   margin-bottom: 45px;
+}
+
+
+/** Подвал **/
+.main-footer {
+  padding: 65px 0;
+  color: #fff;
+  background-color: #464646;
+}
+
+.main-footer .container {}
+
+.main-footer p {
+  margin: 0;
+
+  color: #fff;
+}
+
+/* Подвал верх*/
+.main-footer-top {
+  display: flex;
+}
+
+.main-footer-top .logo {}
+
+.main-footer-top .logo-img {
+  fill: #ffc600;
+}
+
+.main-footer-top .user-navigation {
+  justify-content: flex-end;
+}
+
+.main-footer-top .user-navigation-link {
+  color: #fff;
+}
+
+.main-footer-top .user-navigation-link:hover,
+.main-footer-top .user-navigation-link:focus {
+  color: rgba(255, 255, 255, .6);
+}
+
+.main-footer-top .user-navigation-link:active {
+  color: rgba(255, 255, 255, .3);
+}
+
+/* Подвал центр */
+.main-footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer-middle .site-navigation {
+  width: 440px;
+}
+
+.main-footer-middle .site-navigation-item {}
+
+.main-footer-middle .site-navigation-link {
+  color: #fff;
+}
+
+.main-footer-middle .site-navigation-link:hover,
+.main-footer-middle .site-navigation-link:focus {
+  color: rgba(255, 255, 255, .6);
+}
+
+.main-footer-middle .site-navigation-link:active {
+  color: rgba(255, 255, 255, .3);
+}
+
+/* Подвал низ */
+.main-footer-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+/* Социальные кнопки */
+.social {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-item {
+  margin-right: 23px;
+}
+
+.social-item:last-child {
+  margin-right: 0;
+}
+
+.social-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  opacity: .3;
+}
+
+.social-link:hover,
+.social-link:focus {
+  opacity: .6;
+}
+
+.social-link:active {
+  opacity: .1;
+}
+
+.social-link.icon-fb {
+  background-image: url("../img/svg/fb.svg");
+}
+
+.social-link.icon-ins {
+  background-image: url("../img/svg/instagram.svg");
+}
+
+.social-link.icon-tw {
+  background-image: url("../img/svg/twitter.svg");
+}
+
+.main-footer-bottom .copyright {
+
+}
+
+.copyright a {
+  display: block;
+  width: 27px;
+  height: 34px;
+
+  background-image: url("../img/svg/logo-html.svg");
+  background-repeat: no-repeat;
 }
