@@ -102,6 +102,56 @@
         <li class="breadcrum-item">Моноподы для селфи</li>
       </ul>
     </section><!-- Хлебные крошки -->
+
+    <!-- Фильтр -->
+    <section class="filter">
+      <h2 class="page-title">Фильтр:</h2>
+      <form class="filter-form" action="http://echo.htmlacademy.ru" method="get">
+        <fieldset class="filter-box">
+          <legend class="filter-title">Стоимость</legend>
+          <!-- Регулятор стоимости -->
+        </fieldset>
+
+        <fieldset class="filter-box">
+          <legend class="filter-title">Цвет</legend>
+          <p class="filter-item">
+            <input id="black-color" type="checkbox" name="color[]" value="Черный" checked>
+            <label for="black-color">Черный</label>
+          </p>
+          <p class="filter-item">
+            <input id="white-color" type="checkbox" name="color[]" value="Белый">
+            <label for="white-color">Белый</label>
+          </p>
+          <p class="filter-item">
+            <input id="blue-color" type="checkbox" name="color[]" value="Синий" checked>
+            <label for="blue-color">Синий</label>
+          </p>
+          <p class="filter-item">
+            <input id="red-color" type="checkbox" name="color[]" value="Красный" checked>
+            <label for="red-color">Красный</label>
+          </p>
+          <p class="filter-item">
+            <input id="pink-color" type="checkbox" name="color[]" value="Розовый">
+            <label for="pink-color">Розовый</label>
+          </p>
+        </fieldset>
+
+        <fieldset class="filter-box">
+          <legend class="filter-title">Bluetooth</legend>
+          <p class="filter-item">
+            <input id="yes-bluetooth" type="radio" name="bluetooth" value="Есть">
+            <label for="yes-bluetooth">Есть</label>
+          </p>
+          <p class="filter-item">
+            <input id="no-bluetooth" type="radio" name="bluetooth" value="Нет">
+            <label for="no-bluetooth">Нет</label>
+          </p>
+        </fieldset>
+
+        <button class="button filter-button" type="submit">Показать</button>
+      </form>
+    </section><!-- Фильтр -->
+
   </main><!-- Основной контент -->
 
   <!-- Подвал -->
