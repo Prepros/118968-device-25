@@ -112,7 +112,7 @@ button {
   box-sizing: content-box;
 }
 
-.flex-wrapp {
+.flex-wrapper {
   display: flex;
 }
 
@@ -836,7 +836,7 @@ button {
 
 
 /** Контент каталог товаров **/
-.flex-wrapp .page-title {
+.flex-wrapper .page-title {
   margin: 0;
 
   font-size: 16px;
@@ -1057,4 +1057,78 @@ button {
 .catalog-price {
   font-size: 16px;
   color: #464646;
+}
+
+/* Пагинация */
+.pagination {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-left: 72px;
+  margin-bottom: 90px;
+  padding: 0;
+
+  background-color: #ebebeb;
+
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 30px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-item:first-child + .pagination-item {
+  margin-left: auto;
+}
+
+.pagination-item:nth-last-child(2) {
+  margin-right: auto;
+}
+
+.pagination-link {
+  display: block;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, .3);
+
+  text-transform: uppercase;
+}
+
+.pagination-link:hover,
+.pagination-link:focus {
+  color: rgba(0, 0, 0, .6);
+}
+
+.pagination-link:active,
+.pagination-link.active {
+  color: #000;
+}
+
+.pagination-link.back,
+.pagination-link.next {
+  padding: 20px 30px;
+}
+
+.pagination-link[href].back,
+.pagination-link[href].next {
+  color: #000;
+}
+
+.pagination-link[href].back:hover,
+.pagination-link[href].next:hover,
+.pagination-link[href].back:focus,
+.pagination-link[href].next:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination-link[href].back:active,
+.pagination-link[href].next:active {
+  color: rgba(0, 0, 0, .3);
 }
