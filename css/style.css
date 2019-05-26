@@ -26,6 +26,7 @@
 
 html,
 body {
+  height: 100%;
   margin: 0;
 }
 
@@ -34,6 +35,10 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-width: 1200px;
+
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -269,6 +274,14 @@ button {
   margin-left: auto;
 }
 
+.user-navigation-item.user {
+  margin-right: 10px;
+}
+
+.user-navigation-item.user + .user-navigation-item .user-navigation-link {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .user-navigation-link {
   color: #000;
   text-decoration: none;
@@ -383,6 +396,11 @@ button {
   color: rgba(0, 0, 0, .3);
 }
 
+
+/** Основной контент **/
+.main-content {
+  flex-grow: 1;
+}
 
 /** Слайдшоу товаров **/
 .slider {
@@ -810,4 +828,44 @@ button {
 
   background-image: url("../img/svg/logo-html.svg");
   background-repeat: no-repeat;
+}
+
+
+/** Контент каталог товаров **/
+/* Хлебные крошки */
+.breadcrum {
+
+}
+
+.breadcrum-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrum-item {
+  margin-right: 40px;
+}
+
+.breadcrum-item,
+.breadcrum-link {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, .3);
+}
+
+.breadcrum-link {}
+
+.breadcrum-link:hover,
+.breadcrum-link:focus {
+  color: rgba(0, 0, 0, .6);
+}
+
+.breadcrum-link:active {
+  color: rgba(0, 0, 0, .1);
 }
