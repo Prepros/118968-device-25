@@ -1,0 +1,305 @@
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Gilroy ExtraBold"),
+  local("Gilroy-ExtraBold"),
+  url("../font/gilroy/gilroyextrabold.woff2") format("woff2"),
+  url("../font/gilroy/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gilroy Light"),
+  local("Gilroy-Light"),
+  url("../font/gilroy/gilroylight.woff2") format("woff2"),
+  url("../font/gilroy/gilroylight.woff") format("woff"),;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000;
+
+  background-color: #fff;
+}
+
+input,
+button {
+  font: inherit;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  box-sizing: content-box;
+}
+
+/** Шапка **/
+.main-header {
+  position: relative;
+  background-color: #f7e296;
+}
+
+.main-header-top,
+.main-header-middle,
+.main-header-bottom {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* Шапка верхний блок*/
+.main-header-top {
+  display: flex;
+}
+
+.logo {
+  width: 170px;
+}
+
+.logo[href]:hover,
+.logo[href]:focus {
+  opacity: .6;
+}
+
+.logo[href]:active {
+  opacity: .3;
+}
+
+.logo-img {}
+
+/* Шапка средний блок*/
+.main-header-middle {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  width: 440px;
+
+  box-sizing: border-box;
+}
+
+.search-form input[type="text"] {
+  width: 100%;
+
+  color: rgba(0, 0, 0, .3);
+
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+
+  outline: none;
+}
+
+.search-form input[type="text"]:hover,
+.search-form input[type="text"]:hover::placeholder {
+  color: rgba(0, 0, 0, .6);
+}
+
+.search-form input[type="text"]:focus,
+.search-form input[type="text"]:focus::placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search-form input[type="text"]:focus {
+  border-bottom-color: #000;
+}
+
+.search-form button {
+  padding: 8px 20px;
+  background-color: transparent;
+  border: 2px solid #000;
+
+  outline: none;
+  visibility: hidden;
+}
+
+.search-form button:hover,
+.search-form button:active {
+  color: #fff;
+  background-color: #000;
+
+  visibility: visible;
+}
+
+.search-form button:active {
+  color: rgba(255, 255, 255, .3);
+}
+
+.search-form input[type="text"]:focus + button {
+  visibility: visible;
+}
+
+.user-navigation {
+  display: flex;
+  width: 500px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+
+  list-style: none;
+}
+
+.user-navigation li {
+  margin-right: 35px;
+}
+
+.user-navigation li:last-child {
+  margin-right: 0;
+}
+
+.user-navigation li.right {
+  margin-left: auto;
+}
+
+.user-navigation a {
+  color: #000;
+  text-decoration: none;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: rgba(0, 0, 0, .6);
+}
+
+.user-navigation a:active {
+  color: rgba(0, 0, 0, .3);
+}
+
+/* Шапка нижний блок*/
+.main-header-bottom {
+  box-sizing: border-box;
+}
+.main-navigation {}
+
+.site-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.site-navigation-item {
+  margin-right: 38px;
+}
+
+.site-navigation-item:first-child {
+  width: 250px;
+  margin-right: 290px;
+}
+
+.site-navigation-item:last-child {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.site-navigation-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.site-navigation-link:hover,
+.site-navigation-link:focus {
+  color: rgba(0, 0, 0, .6);
+}
+
+.site-navigation-link:active {
+  color: rgba(0, 0, 0, .3);
+}
+
+.site-navigation-item .sub-menu {
+  position: absolute;
+  left: 0;
+
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0 80px;
+
+  background-color: #f7e296;
+
+  list-style: none;
+}
+
+.site-navigation-item:hover .sub-menu {
+  display: flex;
+}
+
+.site-navigation-item .sub-menu-item {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin-right: 40px;
+}
+
+.site-navigation-item .sub-menu-item:last-child {
+  margin-right: 0;
+}
+
+.site-navigation-item .sub-menu-link {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #000;
+
+  text-decoration: none;
+  text-transform: none;
+}
+
+.site-navigation-item .sub-menu-link:hover,
+.site-navigation-item .sub-menu-link:focus {
+  color: rgba(0, 0, 0, .6);
+}
+
+.site-navigation-item .sub-menu-link:active {
+  color: rgba(0, 0, 0, .3);
+}
