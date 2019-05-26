@@ -834,7 +834,7 @@ button {
 /** Контент каталог товаров **/
 /* Хлебные крошки */
 .breadcrum {
-
+  margin-bottom: 60px;
 }
 
 .breadcrum-list {
@@ -868,4 +868,59 @@ button {
 
 .breadcrum-link:active {
   color: rgba(0, 0, 0, .1);
+}
+
+/* Фильтр */
+.filter {
+  width: 328px;
+  padding-bottom: 80px;
+
+  background-color: #eee;
+}
+
+.filter .page-title {
+  margin: 0;
+  margin-bottom: 70px;
+  padding: 25px 68px 25px 60px;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  background-color: #dcdcdc;
+
+  text-transform: uppercase;
+}
+
+.filter-form {
+  padding-left: 60px;
+  padding-right: 68px;
+}
+
+.filter-box {
+  margin-bottom: 40px;
+  padding: 0;
+  border: none;
+}
+
+.filter-title {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000;
+}
+
+.filter-item {}
+.filter-item input[type="checkbox"] {}
+.filter-item input[type="radio"] {}
+.filter-item label {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 300;
+  color: #000;
+}
+
+.filter-button {
+  width: 100%;
 }
