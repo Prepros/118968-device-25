@@ -587,6 +587,35 @@ button {
   background-image: url("../img/svg/credit.svg");
 }
 
-.service-content-item.active {}
-.service-content-item h3 {}
-.service-content-item p {}
+
+/** Бренды **/
+.brands {
+  margin-bottom: 80px;
+}
+
+.brands-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.brands-item {
+  width: 260px;
+}
+
+.brands-link {}
+
+.brands-link img {
+  width: 260px;
+  height: 100px;
+
+  filter: grayscale(100%);
+}
+
+.brands-link:hover img,
+.brands-link:focus img {
+  filter: grayscale(0);
+}
