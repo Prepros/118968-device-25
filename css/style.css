@@ -112,6 +112,10 @@ button {
   box-sizing: content-box;
 }
 
+.flex-wrapp {
+  display: flex;
+}
+
 .page-title {
   margin: 0;
   margin-bottom: 50px;
@@ -832,6 +836,15 @@ button {
 
 
 /** Контент каталог товаров **/
+.flex-wrapp .page-title {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  text-transform: uppercase;
+}
+
 /* Хлебные крошки */
 .breadcrum {
   margin-bottom: 60px;
@@ -879,16 +892,10 @@ button {
 }
 
 .filter .page-title {
-  margin: 0;
   margin-bottom: 70px;
   padding: 25px 68px 25px 60px;
 
-  font-size: 16px;
-  line-height: 24px;
-
   background-color: #dcdcdc;
-
-  text-transform: uppercase;
 }
 
 .filter-form {
@@ -924,3 +931,60 @@ button {
 .filter-button {
   width: 100%;
 }
+
+
+/* Каталог */
+.catalog {
+  width: 760px;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  padding: 25px 0 25px 72px;
+  background-color: #ebebeb;
+}
+
+.sort .page-title {}
+
+.sort-list {
+  display: flex;
+  width: 560px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.sort-item {
+  margin-right: 30px;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.sort-item:last-child {
+  margin-right: 0;
+}
+
+.sort-item.right {
+  margin-left: auto;
+}
+
+.sort-link {
+  color: rgba(0, 0, 0, .3);
+}
+
+.sort-link:hover,
+.sort-link:focus {
+  color: rgba(0, 0, 0, .6);
+}
+
+.sort-link:active,
+.sort-item.active .sort-link {
+  color: #000;
+}
+
