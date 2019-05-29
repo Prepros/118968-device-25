@@ -48,40 +48,8 @@ body {
   background-color: #fff;
 }
 
-p {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 300;
-  color: #000;
-
-  text-transform: none;
-}
-
 a {
   text-decoration: none;
-}
-
-ul {
-  list-style-type: circle;
-}
-
-li {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 40px;
-  font-weight: 800;
-  color: #000;
-}
-
-input,
-button {
-  font: inherit;
-  border: none;
-}
-
-button {
-  cursor: pointer;
 }
 
 .visually-hidden {
@@ -205,6 +173,7 @@ button {
   color: rgba(0, 0, 0, .3);
 
   background-color: transparent;
+  border: none;
   border-bottom: 2px solid transparent;
 
   outline: none;
@@ -231,6 +200,7 @@ button {
 
   outline: none;
   visibility: hidden;
+  cursor: pointer;
 }
 
 .search-form button:hover,
@@ -632,6 +602,16 @@ button {
   background-image: url("../img/svg/credit.svg");
 }
 
+.service-content-item p {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000;
+
+  text-transform: none;
+}
+
 
 /** Бренды **/
 .brands {
@@ -682,6 +662,16 @@ button {
 .about-info ul {
   margin-top: 68px;
   margin-bottom: 65px;
+
+  list-style-type: circle;
+}
+
+.about-info li {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000;
 }
 
 .about-contact {
