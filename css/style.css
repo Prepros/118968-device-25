@@ -35,6 +35,8 @@ html {
 }
 
 body {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   min-width: 1200px;
@@ -50,6 +52,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -225,6 +232,10 @@ a {
   border-bottom: 2px solid transparent;
 
   outline: none;
+}
+
+.search-form-input::placeholder {
+  color: rgba(0, 0, 0, .3);
 }
 
 .search-form-input:hover,
@@ -1197,57 +1208,6 @@ a {
   opacity: .3;
 }
 
-/** Модальные окна **/
-.modal {
-  width: 960px;
-  margin: 0 auto;
-
-  box-shadow: 0 0 20px rgba(4, 6, 6, .2);
-}
-
-/* Обратная связь */
-.modal-contact {
-  padding: 80px 50px;
-}
-
-.modal-contact-form {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.modal-contact-item {
-  width: 360px;
-}
-
-.modal-contact-item:first-child {
-  margin-right: 40px;
-}
-
-.modal-contact-item.wide {
-  width: 760px;
-}
-
-.modal-contact-item input[type="text"],
-.modal-contact-item textarea {
-  width: 100%;
-  padding: 15px 20px;
-
-  border: none;
-  background-color: #f2f2f2
-}
-
-.modal-contact-item textarea {
-  height: 150px;
-}
-
-.modal-contact-title {
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 800;
-  color: #000;
-}
-
 /* Хлебные крошки */
 .breadcrumbs {
   display: flex;
@@ -1425,8 +1385,6 @@ a {
 }
 
 .filter-list {
-  position: relative;
-
   margin: 0;
   margin-top: 12px;
   margin-bottom: 40px;
@@ -1443,7 +1401,25 @@ a {
   margin-bottom: 24px;
 }
 
-.filter-list::before {
+.filter-list:first-child .filter-title {
+  margin-bottom: 33px;
+}
+
+.filter-title {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  margin-bottom: 23px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000;
+}
+
+.filter-title::before {
   position: absolute;
   left: 0;
   top: -12px;
@@ -1454,20 +1430,6 @@ a {
   background-color: #000;
 
   content: "";
-}
-
-.filter-list:first-child .filter-title {
-  margin-bottom: 33px;
-}
-
-.filter-title {
-  margin-bottom: 23px;
-
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 800;
-  color: #000;
 }
 
 .filter-item {
@@ -1522,13 +1484,13 @@ a {
   background-image: url("../img/svg/radio-on.svg");
 }
 
-.checkbox:hover + label::before,
-.radio:hover + label::before {
+.checkbox + label:hover::before,
+.radio + label:hover::before {
   opacity: .6;
 }
 
-.checkbox:active + label::before,
-.radio:active + label::before {
+.checkbox + label:active::before,
+.radio + label:active::before {
   opacity: 1;
 }
 
@@ -1648,7 +1610,7 @@ a {
 
 .product-item.new:before {
   position: absolute;
-  top: 3px;
+  top: 29px;
   right: 27px;
   z-index: 2;
 
@@ -1817,4 +1779,171 @@ a {
 .pagination li:first-child a:active,
 .pagination li:last-child a:active {
   color: rgba(0, 0, 0, .3);
+}
+
+/** Модальные окна **/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+
+  display: none;
+  width: 960px;
+  margin: 0 auto;
+
+  color: #000;
+
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(4, 6, 6, .2);
+
+  transform: translate(-50%, -50%);
+}
+
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  background-color: rgba(240, 197, 46, .5);
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.modal-close:active {
+  background-color: rgba(240, 197, 46, .3);
+}
+
+.modal-close::before,
+.modal-close::after {
+  position: absolute;
+  left: 13px;
+  top: 27px;
+
+  width: 31px;
+  height: 1px;
+
+  background-color: #fff;
+
+  content: "";
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/* Обратная связь */
+.modal-contact {
+  display: none;
+  padding: 90px 100px 85px;
+}
+
+.modal-contact-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-contact-item {
+  width: 360px;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.modal-contact-item:first-child {
+  margin-right: 40px;
+}
+
+.modal-contact-item.wide {
+  width: 760px;
+  margin-bottom: 49px;
+}
+
+.modal-contact-item .input {
+  width: 100%;
+  padding: 12px 17px;
+
+  color: rgba(70, 70, 70, .4);
+
+  background-color: #f2f2f2;
+  border: 3px solid transparent;
+
+  outline: none;
+}
+
+.modal-contact-item .input:invalid:not(:focus):not(:placeholder-shown) {
+  background-color: #f6dada;
+  border-color: transparent;
+}
+
+.modal-contact-item .input:hover {
+  background-color: #eaeaea;
+}
+
+.modal-contact-item .input:focus {
+  color: rgba(70, 70, 70, 1);
+
+  background-color: #fff;
+  border: 3px solid rgba(240, 197, 46, .5);
+}
+
+.modal-contact-item .input::placeholder {
+  color: rgba(70, 70, 70, .4);
+}
+
+.modal-contact-item .input-textarea {
+  height: 150px;
+}
+
+.modal-contact-title {
+  display: inline-block;
+  margin-bottom: 7px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000;
+}
+
+.modal-map {
+  display: none;
+  width: 960px;
+  height: 559px;
+
+  line-height: 0;
+}
+
+.modal-map img {
+  width: 960px;
+  height: 559px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  display: none: ;
+
+  background-color: rgba(255, 255, 255, .1);
 }
