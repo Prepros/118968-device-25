@@ -163,15 +163,12 @@ img {
 
 /* Шапка верхний блок*/
 .main-header-top {
-  position: relative;
-
   display: flex;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 
 .main-header-top .logo {
-  position: absolute;
-  top: -20px;
+  margin-top: -20px;
 }
 
 .logo {
@@ -202,6 +199,7 @@ img {
   display: flex;
   width: 440px;
   height: 49px;
+  margin-right: 95px;
 }
 
 .search-form::before {
@@ -280,38 +278,25 @@ img {
   visibility: visible;
 }
 
+
+
+
+
+.login-navigation,
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
   margin: 0;
   padding: 0;
-  margin-left: auto;
+
+  color: #000;
 
   list-style: none;
 }
 
-.user-navigation-item {
-  margin-right: 35px;
-  color: #000;
-}
-
-.user-navigation-item:first-child {
-  margin-right: 20px;
-}
-
-.user-navigation-item:last-child {
-  margin-right: 0;
-}
-
-.user-navigation-item.right-side {
-  margin-left: auto;
-}
-
+.login-navigation-link,
 .user-navigation-link {
   position: relative;
-
-  padding-left: 27px;
 
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
@@ -321,16 +306,16 @@ img {
   text-decoration: none;
 }
 
-.user-navigation-link:hover,
-.user-navigation-link:focus {
-  opacity: .6;
+.login-navigation-link svg {
+  margin-right: 14px;
 }
 
-.user-navigation-link:active {
-  opacity: .3;
+.user-navigation-link svg {
+  margin-right: 12px;
 }
 
-.user-navigation-link::before {
+.main-header-middle .login-navigation-link::before,
+.main-header-middle .user-navigation-link::before {
   position: absolute;
   top: 5px;
   left: 0;
@@ -343,30 +328,69 @@ img {
   content: "";
 }
 
-.user-navigation-link.icon-in::before {
+.login-navigation-link:hover,
+.login-navigation-link:focus,
+.user-navigation-link:hover,
+.user-navigation-link:focus {
+  opacity: .6;
+}
+
+.login-navigation-link:active,
+.user-navigation-link:active {
+  opacity: .3;
+}
+
+.login-navigation {
+  max-width: 225px;
+}
+
+.login-navigation-item {
+  margin-right: 20px;
+}
+
+.login-navigation-item:last-child {
+  margin-right: 0;
+}
+
+.login-navigation-link {
+  color: rgba(0, 0, 0, .3);
+}
+
+.main-header-middle .login-navigation-link.icon-in {
+  padding-left: 27px;
+  color: #000;
+}
+
+.main-header-middle .login-navigation-link.icon-in::before {
   background-image: url("../img/svg/user.svg");
 }
 
-.user-navigation-link.icon-compare::before {
+.main-header-middle .user-navigation {
+  max-width: 230px;
+  margin-left: auto;
+}
+
+.user-navigation-item {
+  margin-right: 40px;
+}
+
+.user-navigation-item:last-child {
+  margin-right: 0;
+}
+
+.main-header-middle .user-navigation-link {
+  padding-left: 27px;
+}
+
+.main-header-middle .user-navigation-link.icon-compare::before {
   top: 7px;
   left: 4px;
   background-image: url("../img/svg/compare.svg");
 }
 
-.user-navigation-link.icon-cart::before {
+.main-header-middle .user-navigation-link.icon-cart::before {
   left: 4px;
   background-image: url("../img/svg/cart.svg");
-}
-
-.user-navigation-link.icon-none {
-  padding-left: 0;
-  color: rgba(0, 0, 0, .3);
-}
-
-.user-navigation-svg {
-  position: absolute;
-  top: 4px;
-  left: 0;
 }
 
 /* Шапка нижний блок*/
@@ -520,6 +544,8 @@ img {
 /** Слайдшоу товаров **/
 .slider {
   position: relative;
+
+  min-height: 486px;
   margin-bottom: 104px;
 }
 
@@ -696,6 +722,27 @@ img {
   content: ""
 }
 
+#product-1:checked ~ .slider-list #slide-1,
+#product-2:checked ~ .slider-list #slide-2,
+#product-3:checked ~ .slider-list #slide-3 {
+  display: flex;
+}
+
+#product-1:checked ~ .control #control-1 .control-button::before,
+#product-2:checked ~ .control #control-2 .control-button::before,
+#product-3:checked ~ .control #control-3 .control-button::before {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+
+  width: 3px;
+  height: 3px;
+
+  border: 1px solid #000;
+  border-radius: 50%;
+
+  content: ""
+}
 
 /** Категории товаров **/
 .category {
@@ -764,7 +811,6 @@ img {
   padding-right: 35px;
 }
 
-
 /** Сервисы **/
 .service {
   margin-bottom: 95px;
@@ -823,6 +869,8 @@ img {
   text-transform: uppercase;
   letter-spacing: 4px;
   vertical-align: top;
+
+  cursor: pointer;
 }
 
 .service-menu-link:before {
@@ -848,7 +896,7 @@ img {
 .service-menu-link:active {
   box-sizing: border-box;
   width: 100%;
-  padding: 8px 29px 8px 40px;
+  padding: 8px 29px 8px 22px;
 
   color: #f0c52e;
   text-align: left;
@@ -923,6 +971,24 @@ img {
   text-transform: none;
 }
 
+#service-1:checked ~ .service-menu #service-item-1,
+#service-2:checked ~ .service-menu #service-item-2,
+#service-3:checked ~ .service-menu #service-item-3 {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 29px 8px 22px;
+
+  color: #f0c52e;
+  text-align: left;
+
+  background-color: #000;
+}
+
+#service-1:checked ~ .service-content #service-content-1,
+#service-2:checked ~ .service-content #service-content-2,
+#service-3:checked ~ .service-content #service-content-3 {
+  display: block;
+}
 
 /** Бренды **/
 .brands {
@@ -956,7 +1022,6 @@ img {
 .brands-link:focus img {
   filter: grayscale(0);
 }
-
 
 /** Информация о компании **/
 .about {
@@ -1086,36 +1151,23 @@ img {
   fill: #ffc600;
 }
 
+.main-footer-top .login-navigation,
 .main-footer-top .user-navigation {
-  max-width: 750px;
-  width: auto;
+  color: #fff;
 }
 
-.main-footer-top .user-navigation-item {
-  margin-right: 41px;
+.main-footer-top .login-navigation {
+  margin-left: auto;
+  margin-right: 44px;
 }
 
-.main-footer-top .user-navigation-item:first-child {
-  margin-right: 13px;
-}
-
-.main-footer-top .user-navigation-item:last-child {
-  margin-right: 0;
-}
-
-/* Тут вложенность больше 2-х из-за пиксель перфект */
-.main-footer-top .user-navigation-item:first-child .user-navigation-link {
-  padding-left: 26px;
-}
-
-.main-footer-top .user-navigation-link {
-  padding-left: 23px;
-  color: rgba(255, 255, 255, .7);
-}
-
-.main-footer-top .user-navigation-link.icon-none {
-  padding-left: 0;
+.main-footer-top .login-navigation-link {
   color: rgba(255, 255, 255, .3);
+}
+
+.main-footer-top .login-navigation-link.icon-in,
+.main-footer-top .user-navigation-link {
+  color: rgba(255, 255, 255, .7);
 }
 
 /* Подвал центр */
@@ -1198,9 +1250,6 @@ img {
   width: 32px;
   height: 32px;
 
-  background-color: #efefef;
-  background-repeat: no-repeat;
-
   border-radius: 50%;
   opacity: .3;
 }
@@ -1214,18 +1263,6 @@ img {
   opacity: .1;
 }
 
-.social-link.icon-fb {
-  background-image: url("../img/svg/fb.svg");
-}
-
-.social-link.icon-ins {
-  background-image: url("../img/svg/instagram.svg");
-}
-
-.social-link.icon-tw {
-  background-image: url("../img/svg/twitter.svg");
-}
-
 .main-footer-bottom .copyright {
   width: 27px;
   height: 35px;
@@ -1236,10 +1273,6 @@ img {
   display: block;
   width: 27px;
   height: 34px;
-
-  background-color: #ffc600;
-  background-image: url("../img/svg/logo-html.svg");
-  background-repeat: no-repeat;
 }
 
 .copyright a:hover,
