@@ -396,7 +396,7 @@
         <a class="about-map" href="https://yandex.ru/maps/" target="_blank">
           <img src="img/map.jpg" width="560" height="222" alt="Улица Строителей 15">
         </a>
-        <a class="button" href="#">Напишите нам</a>
+        <a class="button about-feedback" href="#">Напишите нам</a>
       </div>
     </section>
   </main>
@@ -471,29 +471,30 @@
     <form class="modal-contact-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="modal-contact-item">
         <label class="modal-contact-title" for="name">Ваше имя:</label>
-        <input class="input" id="name" type="text" name="name" placeholder="Имя фамилия" required>
+        <input class="input" id="name" type="text" name="name" placeholder="Имя фамилия" >
       </p>
       <p class="modal-contact-item">
         <label class="modal-contact-title" for="email">Ваш e-mail:</label>
-        <input class="input" id="email" type="email" name="email" placeholder="email@example.com" required>
+        <input class="input" id="email" type="email" name="email" placeholder="email@example.com" >
       </p>
       <p class="modal-contact-item wide">
         <label class="modal-contact-title" for="text">Текст письма:</label>
-        <textarea class="input input-textarea" id="text" name="text" placeholder="В свободной форме" required></textarea>
+        <textarea class="input input-textarea" id="text" name="text" placeholder="В свободной форме" ></textarea>
       </p>
-      <button class="button" type="submit">Отправить</button>
+      <button class="button modal-contact-submit" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="submit"><span class="visually-hidden">Закрыть модальное окно</span></button>
   </section>
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Карта проезда</h2>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CCGBePnY" width="960" height="559" frameborder="0" allowfullscreen="true"></iframe>
     <img src="img/map-big.jpg" width="960" height="559" alt="Улица строителей 15">
     <button class="modal-close" type="submit"><span class="visually-hidden">Закрыть модальное окно</span></button>
   </section>
 
   <div class="overlay"></div>
 
-  <script src="#"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
