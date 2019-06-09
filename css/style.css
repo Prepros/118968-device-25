@@ -128,11 +128,13 @@ img {
   background-color: #f0c52e;
 
   content: "";
+  transition: all .4s;
 }
 
-.button:hover,
-.button:focus {
-  background-color: #f0c52e;
+.button:hover::before,
+.button:focus::before {
+  top: 0;
+  height: 100%;
 }
 
 .button:active {
@@ -481,11 +483,13 @@ img {
   background-color: #f7e296;
 
   list-style: none;
+  transition: all .4s;
 }
 
 .site-navigation-item:hover .sub-menu,
 .site-navigation-link.icon-plus:focus + .sub-menu {
   display: flex;
+  transition: all .4s;
 }
 
 .site-navigation-item .sub-menu-item {
@@ -873,7 +877,7 @@ img {
   cursor: pointer;
 }
 
-.service-menu-link:before {
+.service-menu-link::before {
   position: absolute;
   top: 17px;
   left: 0;
@@ -885,11 +889,13 @@ img {
   background-color: #f0c52e;
 
   content: "";
+  transition: all .4s;
 }
 
-.service-menu-link:hover,
-.service-menu-link:focus {
-  background-color: #f0c52e;
+.service-menu-link:hover::before,
+.service-menu-link:focus::before {
+  top: 0;
+  height: 100%;
 }
 
 .service-menu-item.active .service-menu-link,
@@ -1095,14 +1101,12 @@ img {
   margin-bottom: 39px;
 }
 
-.about-contact img {
-  margin-bottom: 45px;
-}
-
 .about-map {
   display: block;
   min-height: 222px;
-  margin-bottom: 15px;
+  margin-bottom: 68px;
+
+  line-height: 0;
 
   background-color: #efefef;
 }
@@ -1941,6 +1945,9 @@ img {
 .modal-contact {
   display: none;
   padding: 90px 100px 85px;
+
+  animation-name: show;
+  animation-duration: 0.6s;
 }
 
 .modal-contact-form {
@@ -1975,9 +1982,13 @@ img {
   outline: none;
 }
 
+.modal-contact-item .input-error,
 .modal-contact-item .input:invalid:not(:focus):not(:placeholder-shown) {
   background-color: #f6dada;
   border-color: transparent;
+
+  animation-name: error;
+  animation-duration: 0.6s;
 }
 
 .modal-contact-item .input:hover {
@@ -2017,6 +2028,10 @@ img {
   height: 559px;
 
   line-height: 0;
+
+  overflow: hidden;
+  animation-name: show;
+  animation-duration: 0.6s;
 }
 
 .modal-map img {
@@ -2035,4 +2050,27 @@ img {
   display: none;
 
   background-color: rgba(255, 255, 255, .1);
+}
+
+.open {
+  display: block;
+  animation-name: show;
+  animation-duration: 0.6s;
+}
+
+.close {
+  display: none;
+  animation-name: show;
+  animation-duration: 0.6s;
+}
+
+@keyframes show {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes error {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
