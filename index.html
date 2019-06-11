@@ -488,13 +488,14 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Карта проезда</h2>
-    <iframe src="https://yandex.ru/map-widget/v1/-/CCGBePnY" width="960" height="559" frameborder="0" allowfullscreen="true"></iframe>
+    <div class="yandex-map" id="map"></div>
     <img src="img/map-big.jpg" width="960" height="559" alt="Улица строителей 15">
     <button class="modal-close" type="submit"><span class="visually-hidden">Закрыть модальное окно</span></button>
   </section>
 
   <div class="overlay"></div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

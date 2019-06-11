@@ -121,6 +121,31 @@ window.addEventListener("keydown", function(evt) {
   }
 });
 
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+        center: [55.68697956906804,37.52965449999998],
+        zoom: 16,
+        controls: ['zoomControl']
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
 
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Мы здесь',
+            balloonContent: 'Интерет магазин Device'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/yandex.png',
+            // Размеры метки.
+            iconImageSize: [40, 60],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
 
-
+    myMap.geoObjects
+        .add(myPlacemark);
+});
