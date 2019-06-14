@@ -1020,13 +1020,20 @@ img {
 .brands-link img {
   width: 260px;
   height: 100px;
-
-  filter: grayscale(100%);
 }
 
-.brands-link:hover img,
-.brands-link:focus img {
-  filter: grayscale(0);
+.brands-image-hover {
+  display: none;
+}
+
+.brands-link:hover .brands-image-hover,
+.brands-link:focus .brands-image-hover {
+  display: block;
+}
+
+.brands-link:hover .brands-image,
+.brands-link:focus .brands-image {
+  display: none;
 }
 
 /** Информация о компании **/
