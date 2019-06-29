@@ -1196,6 +1196,7 @@ img {
 
 .main-footer-top .login-navigation,
 .main-footer-top .user-navigation {
+  margin-top: -4px;
   color: #fff;
 }
 
@@ -1208,11 +1209,14 @@ img {
   color: rgba(255, 255, 255, .3);
 }
 
+.main-footer-top .login-navigation-link,
+.main-footer-top .user-navigation-link {
+  line-height: 36px;
+}
+
 .main-footer-top .login-navigation-link.icon-in,
 .main-footer-top .user-navigation-link {
   padding-left: 26px;
-
-  line-height: 36px;
   color: rgba(255, 255, 255, .7);
 }
 
@@ -1233,6 +1237,10 @@ img {
 
 .main-footer-middle p:last-child {
   margin-left: auto;
+}
+
+.main-footer-middle .phone {
+  color: #fff;
 }
 
 .main-footer-middle .site-navigation {

@@ -27,7 +27,7 @@ aboutFeedback.addEventListener("click", function (evt) {
   } catch (err) {
     isStorageSupport = false;
   }
-alert(storageEmail);
+
   if (!modalContact.classList.contains("open") && !overlay.classList.contains("open")) {
     overlay.classList.add("open");
     modalContact.classList.add("open");
@@ -68,6 +68,7 @@ formFeedback.addEventListener("submit", function (evt) {
     inputEmail.classList.add("input-error");
     inputEmail.placeholder = "Это поле обязательно для заполнения";
   } else {
+    inputEmail.classList.remove("input-error");
     localStorage.setItem("email", inputEmail.value);
   }
 
@@ -140,7 +141,7 @@ ymaps.ready(function () {
       // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
       // Своё изображение иконки метки.
-      iconImageHref: '../img/yandex.png',
+      iconImageHref: 'img/yandex.png',
       // Размеры метки.
       iconImageSize: [40, 60],
       // Смещение левого верхнего угла иконки относительно
