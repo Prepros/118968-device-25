@@ -89,7 +89,7 @@ img {
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
-  letter-spacing: 0.47px;
+  letter-spacing: .47px;
   color: #000;
 
   text-transform: none;
@@ -228,6 +228,7 @@ img {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
+  letter-spacing: .15px;
   color: rgba(0, 0, 0, .3);
 
   background-color: transparent;
@@ -307,6 +308,7 @@ img {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
+  letter-spacing: .15px;
   color: #000;
   text-decoration: none;
 }
@@ -359,7 +361,7 @@ img {
 }
 
 .login-navigation {
-  max-width: 225px;
+  max-width: 230px;
 }
 
 .login-navigation-item {
@@ -451,8 +453,8 @@ img {
 }
 
 .site-navigation-link {
-  letter-spacing: 3.5px;
   color: #000;
+  letter-spacing: 3.6px;
   text-decoration: none;
 }
 
@@ -473,7 +475,7 @@ img {
 .site-navigation-link.icon-plus::after {
   position: absolute;
   top: 3px;
-  right: 2px;
+  right: 4px;
 
   width: 16px;
   height: 16px;
@@ -658,7 +660,7 @@ img {
   font-size: 47px;
   line-height: 56px;
   font-weight: 800;
-  letter-spacing: 0.47px;
+  letter-spacing: .47px;
   color: #000;
   text-transform: none;
 }
@@ -1542,7 +1544,7 @@ img {
 
   display: block;
   width: 100%;
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
@@ -1579,7 +1581,7 @@ img {
 
   font-size: 14px;
   line-height: 40px;
-  letter-spacing: 0.14px;
+  letter-spacing: .14px;
 
   cursor: pointer;
 }
@@ -1857,10 +1859,10 @@ img {
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
+  letter-spacing: .18px;
 }
 
 .product-title a {
-  letter-spacing: 0.18px;
   white-space: pre-line;
   color: #000;
 }
