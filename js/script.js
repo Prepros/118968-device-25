@@ -17,16 +17,17 @@ var isStorageSupport = true;
 var storageName = "";
 var storageEmail = "";
 
-try {
-  storageName = localStorage.getItem("name");
-  storageEmail = localStorage.getItem("email");
-} catch (err) {
-  isStorageSupport = false;
-}
-
 // Открываем модальное окно с формой обратной связи
 aboutFeedback.addEventListener("click", function (evt) {
   evt.preventDefault();
+
+  try {
+    storageName = localStorage.getItem("name");
+    storageEmail = localStorage.getItem("email");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+alert(storageEmail);
   if (!modalContact.classList.contains("open") && !overlay.classList.contains("open")) {
     overlay.classList.add("open");
     modalContact.classList.add("open");
